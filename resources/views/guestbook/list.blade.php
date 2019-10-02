@@ -15,10 +15,12 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-        Показать JSON
-    </button>
+    <div class="pull-left">
+        <a class="btn btn-success" href="{{ route('create') }}"> Create New Entry</a>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+            Показать JSON
+        </button>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -31,7 +33,9 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    {{ json_decode($entries) }}
+                    <script>
+                        window.__payload = JSON.parse("{!!$entries!!}");
+                    </script>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

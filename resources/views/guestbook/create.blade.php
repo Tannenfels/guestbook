@@ -30,25 +30,25 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Имя пользователя:</strong>
-                    <input type="text" name="username" class="form-control" placeholder="Имя пользователя">
+                        <input type="text" name="username" class="form-control" placeholder="Имя пользователя">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>E-mail:</strong>
-                    <textarea class="form-control" style="height:150px" name="email" placeholder="Электронная почта"></textarea>
+                        <input type="text" class="form-control" name="email" placeholder="Электронная почта">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>URL:</strong>
-                    <textarea class="form-control" style="height:150px" name="homepage"></textarea>
+                        <input type="text" class="form-control" name="homepage">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Текст:</strong>
-                    <textarea class="form-control" style="height:150px" name="text" placeholder="Введите текст..."></textarea>
+                        <textarea class="form-control" style="height:150px" name="text" placeholder="Введите текст..."></textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

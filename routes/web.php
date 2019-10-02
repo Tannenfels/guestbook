@@ -14,5 +14,5 @@
 Route::get('/', 'GuestbookController@list')->name('home');
 Route::redirect('/home', '/');
 
-Route::post('/store_entry', 'GuestbookController@storeArticle')->name('store');
-Route::get('/create_entry', 'GuestbookController@createArticle')->name('create');
+Route::post('/store_entry', 'GuestbookController@store')->name('store');
+Route::get('/create_entry', 'GuestbookController@create')->name('create');

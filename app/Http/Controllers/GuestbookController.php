@@ -23,7 +23,7 @@ class GuestbookController extends Controller
     }
 
 
-    public function storeComment(Request $request){
+    public function store(Request $request){
         $request->validate([
             'username' => 'required',
             'email' => 'required',
@@ -32,10 +32,10 @@ class GuestbookController extends Controller
 
         $homepage = '';
 
-        $username = strip_tags((string)$request->only('username'));
-        $email = strip_tags((string)$request->only('email'));
-        $text = strip_tags((string)$request->only('text'));
-        $homepage = strip_tags((string)$request->only('homepage'));
+        $username = strip_tags((string)$request->input('username'));
+        $email = strip_tags((string)$request->input('email'));
+        $text = strip_tags((string)$request->input('text'));
+        $homepage = strip_tags((string)$request->input('homepage'));
         $ip = request()->ip();
         $user_agent = $request->header('User-Agent');
         $created_at = Carbon::now();
@@ -61,7 +61,7 @@ class GuestbookController extends Controller
      * @return Response
      */
 
-    public function createArticle()
+    public function create()
     {
         return view('guestbook.create');
     }
